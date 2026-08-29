@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#0d1014" />
+  <meta name="color-scheme" content="dark" />
+  <title>RailTimeline Web · POC 0.1</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="icons/icon-192.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app" class="app-shell">
+    <header class="topbar">
+      <button class="brand" data-nav="home" aria-label="Inicio">
+        <img src="icons/icon-192.png" alt="" />
+        <span><strong>RailTimeline</strong><small>WEB · POC 0.1</small></span>
+      </button>
+      <div id="rail-position" class="rail-position"><span class="status-dot"></span><span>GPS desconectado</span></div>
+      <div class="clock"><span id="clock-date">--/--/----</span><strong id="clock-time">--:--:--</strong></div>
+    </header>
+
+    <aside class="sidebar" aria-label="Navegación principal">
+      <button class="nav-button active" data-nav="home"><span class="nav-icon">⌂</span><span>Inicio</span></button>
+      <button class="nav-button" data-nav="prepare"><span class="nav-icon">＋</span><span>Preparación</span></button>
+      <button class="nav-button" data-nav="ebula"><span class="nav-icon">≡</span><span>eBuLa</span></button>
+      <button class="nav-button" data-nav="knowledge"><span class="nav-icon">i</span><span>Habilitación</span></button>
+      <button class="nav-button" data-nav="history"><span class="nav-icon">↺</span><span>Histórico</span></button>
+      <div class="sidebar-spacer"></div>
+      <button class="nav-button" data-nav="data"><span class="nav-icon">⚙</span><span>Datos</span></button>
+    </aside>
+
+    <main id="main" class="main"></main>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <div id="modal-root"></div>
+  <input id="catalog-file" type="file" accept=".json,.rtlim.json,application/json" hidden />
+  <input id="knowledge-file" type="file" accept=".json,.rtkb.json,application/json" hidden />
+  <input id="lim-file" type="file" accept="application/pdf,.pdf" hidden />
+  <input id="dhltv-file" type="file" accept="application/pdf,.pdf" hidden />
+
+  <script src="data/catalog.js"></script>
+  <script src="data/pk.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

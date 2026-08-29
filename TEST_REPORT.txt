@@ -1,0 +1,12 @@
+RailTimeline Web POC 0.1 - validación de empaquetado
+===================================================
+
+- Sintaxis JavaScript app.js: OK (node --check)
+- Sintaxis JavaScript sw.js: OK (node --check)
+- Manifest PWA: OK
+- Catálogo beta91 incluido: OK (82 recorridos)
+- Referencias IDEAdif incluidas: OK (2.590 puntos / 13 líneas)
+- Recursos e iconos: OK
+- Flujos incluidos en código: Preparación, eBuLa, GPS/PK, Habilitación, PDF/IndexedDB, Histórico, catálogo custom.
+
+Nota: el Chromium headless del entorno de generación no finaliza ni siquiera con una página HTML mínima debido a su configuración DBus/zygote, por lo que la validación visual final debe hacerse en un navegador normal. No afecta al contenido del ZIP.
